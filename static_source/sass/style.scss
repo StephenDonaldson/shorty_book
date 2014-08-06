@@ -62,6 +62,22 @@ body{
     background-color: #77c1b8 !important;
 }
 
-#text h1, #text h2{
+.text h1, #text h2{
     @include Futura;
+}
+
+.text h1{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+}
+
+#download{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
