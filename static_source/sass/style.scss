@@ -1,0 +1,67 @@
+@import "compass/css3/background-size";
+
+@import "compass/layout.scss";
+
+@include sticky-footer(88px, "#main", "#main-footer", "#footer");
+
+
+@import "registration";
+@import "buttons";
+@import "variables";
+@import "nav";
+@import "footer";
+
+/* uncomment for bootstrap */
+$bootstrap-sass-asset-helper: false;
+@import "bootstrap";
+
+/* uncomment for bourbon and neat */
+/* http://bourbon.io/docs/ */
+@import 'bourbon/bourbon';
+@import 'base/base';
+/* http://neat.bourbon.io/docs/ */
+@import 'neat/neat';
+
+/* comment to turn off grid */
+$visual-grid: true;
+
+/* div.container { */
+/*   @include outer-container; */
+/* } */
+
+@font-face {
+    font-family: 'futura_lt';
+    src: url('../fonts/futuralt-webfont.eot');
+    src: local('../fonts/futuralt-webfont.eot');
+    src: url('../fonts/futuralt-webfont.ttf') format('truetype');
+    src: local('../fonts/futuralt-webfont.ttf') format('truetype');
+    src: url('../fonts/futuralt-webfont.woff') format('woff');
+    src: local('../fonts/futuralt-webfont.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'proximanova-regular';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: local('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.ttf') format('truetype');
+    src: local('../fonts/proximanova-regular-webfont.ttf') format('truetype');
+    src: url('../fonts/proximanova-regular-webfont.woff') format('woff');
+    src: local('../fonts/proximanova-regular-webfont.woff') format('woff');
+}
+
+@mixin Futura{
+    font-family: 'futura_lt';
+}
+
+.clear {
+    clear: both;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #77c1b8 !important;
+}
+
+#text h1, #text h2{
+    @include Futura;
+}
