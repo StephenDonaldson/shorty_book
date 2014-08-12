@@ -11,12 +11,16 @@ from django.contrib.auth.decorators import login_required
 from payments.models import Customer
 from annoying.decorators import render_to, ajax_request
 
-from .forms import StripeTokenForm, ChargeForm
+from .forms import StripeTokenForm, ChargeForm, EmailForm
 
 
 @render_to('index.html')
 def index(request):
-    return {}
+    if request.method == "POST":
+       form = EmailForm(request.POST)
+    else:
+       form = EmailForm()
+    return {"form": form}
 
 def error(request):
     """for testing purposes"""

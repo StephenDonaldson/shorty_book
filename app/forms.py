@@ -15,3 +15,7 @@ class StripeTokenForm(forms.Form):
 
 class ChargeForm(forms.Form):
     amount = forms.DecimalField(max_digits=5, decimal_places=2)
+
+class EmailForm(forms.Form):
+    email_address = forms.CharField(widget=forms.TextInput(
+                              attrs={'placeholder': 'you@awesome.com'}))

@@ -7,19 +7,29 @@ Shorty Awards Book Download
 
 {% block content %}
 {% load static from staticfiles %}
-<div class="row text">
-     <h1>The Short Report</h1>
+<div class="row text header">
+  <h1>The Short Report</h1>
 </div>
 <div class="row">
-     <div class="col-md-6 text">
-     	  <h2>The Shorty Awards honor the best of social media, recognizing the people and organizations producing real-time short form content across Twitter, Facebook, Tumblr, YouTube, Instagram, Vine, and the rest of the social Web.</h2>
-	  <h2>Social media gives companies a human touch, bringing customers closer to their favorite brands while allowing marketers to engage directly with followers in fun and creative ways. The Shorty Awards honor the talented agencies, brands, and leaders behind the best social media channels, campaigns, websites, games, and applications.</h2>
-	  <h2>Past Shorty winners and nominees include Comcast, JetBlue, The Daily Show, TED, Pepsi, Whole Foods, NASA, Jerry Seinfeld, Suze Orman Show, HBO, CNN Worldwide, Discovery Channel and many more social media pioneers.</h2>
-	  <h2>Download the Shorty Trend Report featuring the best social media campaigns from 2013.</h2>
-     </div>
-     <div id="download" class="col-md-6 text">
-          <h2>
-     </div>
+  <div class="col-md-9 blurb">
+    <h2>The Shorty Awards honor the best of social media, recognizing the people and organizations producing real-time short form content across Twitter, Facebook, Tumblr, YouTube, Instagram, Vine, and the rest of the social Web.</h2></br></br>
+    <h2>Social media gives companies a human touch, bringing customers closer to their favorite brands while allowing marketers to engage directly with followers in fun and creative ways. The Shorty Awards honor the talented agencies, brands, and leaders behind the best social media channels, campaigns, websites, games, and applications.</h2></br></br>
+    <h2>Past Shorty winners and nominees include Comcast, JetBlue, The Daily Show, TED, Pepsi, Whole Foods, NASA, Jerry Seinfeld, Suze Orman Show, HBO, CNN Worldwide, Discovery Channel and many more social media pioneers.</h2></br></br>
+    <h2>Download the Shorty Trend Report featuring the best social media campaigns from 2013.</h2>
+  </div>
+</div>
+<div id="downloadRow" class="row">
+  <div id="download" class="text">
+    <h2>DOWNLOAD OUR REPORT</h2>
+    <label for="EMAIL">Email address</label>
+    <!-- <form action="{{ request.get_full_path }}" method="post" class="form-control">{% csrf_token %} -->
+      <!-- {{ form.email_address }} -->
+      <!-- {{ form.email_address.errors }} -->
+      <!-- {{ form.non_field_errors }} -->
+    <!-- </form> -->
+    <input class="form-control" type="text" size="40" name="EMAIL" placeholder="you@awesome.com"></input>
+    <input id="mc-embedded-submit" class="btn btn-primary btn-lg" type="sumbit" name="submit" value="Submit" onclick="ga.track('email')"></input>
+  </div>
 </div>
 
 {% endblock content %}
