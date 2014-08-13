@@ -29,28 +29,8 @@ $visual-grid: true;
 /*   @include outer-container; */
 /* } */
 
-@font-face {
-    font-family: 'futura_lt';
-    src: url('../fonts/futuralt-webfont.eot');
-    src: local('../fonts/futuralt-webfont.eot');
-    src: url('../fonts/futuralt-webfont.ttf') format('truetype');
-    src: local('../fonts/futuralt-webfont.ttf') format('truetype');
-    src: url('../fonts/futuralt-webfont.woff') format('woff');
-    src: local('../fonts/futuralt-webfont.woff') format('woff');
-}
-
-@font-face{
-    font-family: 'proximanova-regular';
-    src: url('../fonts/proximanova-regular-webfont.eot');
-    src: local('../fonts/proximanova-regular-webfont.eot');
-    src: url('../fonts/proximanova-regular-webfont.ttf') format('truetype');
-    src: local('../fonts/proximanova-regular-webfont.ttf') format('truetype');
-    src: url('../fonts/proximanova-regular-webfont.woff') format('woff');
-    src: local('../fonts/proximanova-regular-webfont.woff') format('woff');
-}
-
 @mixin Futura{
-    font-family: 'futura_lt';
+    font-family: 'futura-pt';
 }
 
 @mixin ProximaNova{
@@ -76,7 +56,7 @@ body{
 }
 
 .text h1{
-    @include ProximaNova;
+    @include Futura;
     text-align: center;
     font-size: 75px;
     color: #fff;
@@ -90,13 +70,17 @@ body{
     color: #1e988a;
 }
 
-.blurb{
-    float: right !important;
+#blurb{
+    float: right;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 0.175s ease-in-out 0s;
 }
 
-.blurb h2{
+#blurb h2{
     @include Futura;
-    color: #fff;
+    color: #1e988a;
 }
 
 #downloadRow{
@@ -139,4 +123,13 @@ body{
 #mc-embedded-submit{
     width: 100px;
     margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px){
+    #blurb, #download{
+	margin-left: 30px;
+	margin-right: 30px;
+    }
 }
